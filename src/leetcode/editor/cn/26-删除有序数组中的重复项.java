@@ -59,13 +59,36 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int count = 1;
-        for(int i=1;i<nums.length;i++){
-            if(nums[i] != nums[count-1]){
-                nums[count++] = nums[i];
+////        nums = [0,0,1,1,1,2,2,3,3,4]
+//        int count = 1;
+//        for(int i=1;i<nums.length;i++){
+////            nums[1]=nums[0]   nums[2]!=nums[0]   nums[3]
+//            if(nums[i] != nums[count-1]){
+////                将nums[2]赋给nums[0]
+//                nums[count] = nums[i];
+////                nums = [1,0,1,1,1,2,2,3,3,4]
+//                count++;
+////                count=1
+//            }
+//        }
+//        return count;
+
+
+        // 使用双指针
+        if(nums==null || nums.length == 1){
+            return nums.length;
+        }
+        int i = 0,j =1;
+        while(j<nums.length){
+            if(nums[i]==nums[j]){
+                j++;
+            }else{
+                i++;
+                nums[i]=nums[j];
+                j++;
             }
         }
-        return count;
+        return i+1;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
