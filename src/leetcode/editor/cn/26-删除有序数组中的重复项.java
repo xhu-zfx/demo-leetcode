@@ -59,7 +59,13 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int removeDuplicates(int[] nums) {
-        System.out.println("hello");
+        int count = 1;
+        for(int i=1;i<nums.length;i++){
+            if(nums[i] != nums[count-1]){
+                nums[count++] = nums[i];
+            }
+        }
+        return count;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
