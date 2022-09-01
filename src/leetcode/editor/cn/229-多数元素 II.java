@@ -70,7 +70,6 @@ class Solution {
 //        res.add(count1);res.add(count2);
 //        此时会默认存储两个元素 , 如果某个元素没有出现⌊ n/3 ⌋次的话也会被存入 , 故需要判断两个元素的出现次数
 
-//        因为判断的时候
         int verifyCount1=0,verifyCount2=0;
         for (int num : nums) {
             if (num==res1) verifyCount1++;
