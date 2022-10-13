@@ -6,6 +6,9 @@ package src.leetcode.editor.cn;
  * @date 2022/10/10 21:22
  * @description
  */
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 public class bag01{
     public static void main(String[] args){
