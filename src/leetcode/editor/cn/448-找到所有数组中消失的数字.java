@@ -31,7 +31,7 @@
 //
 // Related Topics 数组 哈希表 👍 1083 👎 0
 
-import java.util.List;
+import java.util.*;
 
 /**
  * @author  xhu-zfx
@@ -42,7 +42,17 @@ import java.util.List;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
-
+        Set<Integer> set = new HashSet<>();
+        List<Integer> res = new ArrayList<>();
+        // 存储num数组中的元素
+        for (int i = 0; i < nums.length; i++) {
+            set.add(nums[i]);
+        }
+        // 遍历1-n
+        for (int i = 1; i <= nums.length;i++){
+            if (!set.contains(i)) res.add(i);
+        }
+        return res;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
