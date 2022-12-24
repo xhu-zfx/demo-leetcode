@@ -56,7 +56,7 @@
 class Solution {
     public boolean exist(char[][] board, String word) {
         int h = board.length;int w = board[0].length;
-        // 存储当前位置释放被访问过
+        // 存储当前位置是否被访问过
         boolean[][] visited = new boolean[h][w];
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++) {
