@@ -109,6 +109,18 @@ public class Solution {
 //            fast = fast.next.next;
 //        }
 //        return true;
+
+
+//        if(head == null || head.next == null) return false;
+//        // 双指针，一个每次移动两格，另一个每次一格，如果存在环，那么总有一次它们会重合
+//        ListNode slow = head;
+//        ListNode fast = head.next;
+//        while(fast != null && fast.next != null){
+//            fast = fast.next.next;
+//            slow = slow.next;
+//            if(fast == slow) return true;
+//        }
+//        return false;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
